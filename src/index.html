@@ -18,28 +18,33 @@
     <main class="container">
         <div class="form-group">
             <label for="amount">Amount of Your Bill:</label>
-            <input type="number"
+            <input id="billAmount"
+                   type="number"
                    class="form-control">
         </div>
         <div class="btn-group"
              role="group"
+             id="tip-buttons"
              aria-label="Basic example">
             <button type="button"
+                    data-amount=".1"
                     class="btn btn-secondary">10%</button>
             <button type="button"
+                    data-amount=".15"
                     class="btn btn-secondary">15%</button>
             <button type="button"
-                    class="btn btn-secondary"
-                    disabled>20%</button>
+                    data-amount=".2"
+                    class="btn btn-secondary">20%</button>
             <button type="button"
+                    data-amount=".25"
                     class="btn btn-secondary">25%</button>
         </div>
         <section>
             <ul class="list-group">
-                <li class="list-group-item">Amount of Bill: $0.00</li>
-                <li class="list-group-item">Tip Percentage: 20%</li>
-                <li class="list-group-item">Tip Ammount: $0.00</li>
-                <li class="list-group-item">Total To Be Paid: $0.00</li>
+                <li class="list-group-item">Amount of Bill: $<span id="amount"></span></li>
+                <li class="list-group-item">Tip Percentage: <span id="tip"></span>>%</li>
+                <li class="list-group-item">Tip Ammount: $<span id="amountToTip"></span></li>
+                <li class="list-group-item">Total To Be Paid: $<span id="totalToBePaid"></span></li>
             </ul>
         </section>
     </main>
